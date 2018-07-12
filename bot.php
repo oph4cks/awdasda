@@ -514,18 +514,20 @@ function insta($keyword) {
     $result .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n\n";
     $result .= "┇Cyͥbeͣrͫ TK\n";
     $result .= "┇ Kicker & Security\n";
-    $result .= "┇   İnstagramSystemsV.3.5.0\n";
+    $result .= "┇   İnstagramSystemsV.3.5.0\n\n";
     $result .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n\n";
-    $result .= "「PROFILE INSTAGRAM」\n\n";
-    $result .= "『Name』 ➜ ";
+    $result .= " ▂▂▂▂▂▂▂▂▂▂▂\n";
+    $result .= "▎「PROFILE INSTAGRAM」▎\n";
+    $result .= "▔▔▔▔▔▔▔▔▔▔\n";
+    $result .= "֍『Name』 ➜ ";
     $result .= $json['result']['full_name'];
-    $result .= "\n『 UserName 』➜ ";
+    $result .= "\n֍『 UserName 』➜ ";
     $result .= $json['result']['username'];
-    $result .= "\n『 Private 』➜ ";
+    $result .= "\n֍『 Private 』➜ ";
     $result .= $json['result']['is_private'];
-    $result .= "\n『 Follower 』➜ ";
+    $result .= "\n֍『 Follower 』➜ ";
     $result .= $json['result']['byline'];
-    $result .= "\n\n https://www.instagram.com/" . $keyword;
+    $result .= "\n\n ֍ https://www.instagram.com/" . $keyword;
     return $result;
 }
 function google_image($keyword) {
@@ -787,7 +789,12 @@ if ($type == 'join' || $command == 'Help') {
     $text .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n\n";
     $text .= "❚⊛[Chat-Bot-Creator ↓]\n";
     $text .= "❚⊛『http://line.me/ti/p/~cybertk0』\n";
-    $text .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n";
+    $text .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n\n";
+    $text .= "﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋\n";
+    $text .= "+-+ +-+ +-+ +-+ +-+ +-+ +-+\\n";
+    $text .= " |C| |y| |b| |e| |r| |T| |K|\n";
+    $text .= "+-+ +-+ +-+ +-+ +-+ +-+ +-+\n";
+    $text .= "﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
