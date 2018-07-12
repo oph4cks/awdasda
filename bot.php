@@ -231,14 +231,6 @@ function film_syn($keyword) {
 	$result .= $json['Plot'];
     return $result;
 }
-function leave_room($keyword) {
-    $response = $client->leaveRoom('groupId');
-    $response = Unirest\Request::get("$response");    
-                    
-    $json = json_decode($response->raw_body, true);
-    $result = "by by";
-      return $result;
-}  
 #-------------------------[Function]-------------------------#
 function film($keyword) {
     $uri = "http://www.omdbapi.com/?t=" . $keyword . '&plot=full&apikey=d5010ffe';
@@ -524,14 +516,18 @@ function insta($keyword) {
     $uri = "https://ari-api.herokuapp.com/instagram?username=" . $keyword;
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
+    $result = "┇──────────────\n";
+    $result = "┇Cyͥbeͣrͫ TK\n";
+    $result = "┇  Kicker & Security  İnstagramSystemsV.3.5.0\n";
+    $result = "┇────────────────\n\n"
     $result = "「PROFILE INSTAGRAM」\n\n";
-    $result .= "DisplayName: ";
+    $result .= "『Name』 ➜ ";
     $result .= $json['result']['full_name'];
-    $result .= "\nUserName: ";
+    $result .= "\n『 UserName 』: ";
     $result .= $json['result']['username'];
     $result .= "\nPrivate: ";
     $result .= $json['result']['is_private'];
-    $result .= "\nFollower: ";
+    $result .= "\n『 Follower 』: ";
     $result .= $json['result']['byline'];
     $result .= "\n\n https://www.instagram.com/" . $keyword;
     return $result;
@@ -645,6 +641,10 @@ function youtubelist($keyword) {
     $uri = "https://ari-api.herokuapp.com/youtube/search?q=" . $keyword;
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
+    $parsed = "┇──────────────\n";
+    $parsed = "┇Cyͥbeͣrͫ TK\n";
+    $parsed = "┇  Kicker & Security YotubeSystemsV.3.5.0\n";
+    $parsed = "┇────────────────\n\n"
     $parsed = "YOUTUBE LIST\n\n";
     $parsed .= "ID: ";
     $parsed .= $json['result'][0]['id'];
@@ -803,20 +803,6 @@ if ($type == 'join' || $command == 'Help') {
     );
 }
 if($message['type']=='text') {
-	    if ($command == 'leave') {
-        $result = leave_room($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'leaveRoom',
-                    'text' => $result
-                )
-            )
-        );
-    }
-}
-if($message['type']=='text') {
 	    if ($command == '#hava') {
         $result = cuaca($options);
         $balas = array(
@@ -921,6 +907,16 @@ if($message['type']=='text') {
                 array(
                     'type' => 'text',
                     'text' => $result
+                    'type' => 'text',
+                    'text' => $result
+                    'type' => 'text',
+                    'text' => $result
+                    'type' => 'text',
+                    'text' => $result
+                    'type' => 'text',
+                    'text' => $result
+                    'type' => 'text',
+                    'text' => $result
                 )
             )
         );
@@ -973,6 +969,7 @@ if($message['type']=='text') {
         );
     }
 }
+
 if($message['type']== 'text'){
     $pesan_datang = strtolower($message['text']);
     $filter = explode(' ', $pesan_datang);
