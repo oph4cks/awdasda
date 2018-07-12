@@ -1507,7 +1507,7 @@ if ($command == '#saat') {
                     array ( 
                       0 =>  
                       array ( 
-                        'thumbnailImageUrl' => 'https://image.prntscr.com/image/K0b2P-S6RO6fzFqOVwkgtw.jpg', 
+                        'thumbnailImageUrl' => 'https://img.youtube.com/vi/CEb0dBnPCZU/maxresdefault.jpg', 
                         'imageBackgroundColor' => '#FFFFFF', 
                         'title' => 'SUAN', 
                         'text' => 'Saat Turkey', 
@@ -1529,7 +1529,7 @@ if ($command == '#saat') {
                       ), 
                       1 =>  
                       array ( 
-                        'thumbnailImageUrl' => 'https://image.prntscr.com/image/K0b2P-S6RO6fzFqOVwkgtw.jpg', 
+                        'thumbnailImageUrl' => 'https://img.youtube.com/vi/CEb0dBnPCZU/maxresdefault.jpg', 
                         'imageBackgroundColor' => '#000000', 
                         'title' => 'SONRASI', 
                         'text' => 'Saat Turkey', 
@@ -1551,7 +1551,7 @@ if ($command == '#saat') {
                       ), 
 					  2 =>  
                       array ( 
-                        'thumbnailImageUrl' => 'https://image.prntscr.com/image/K0b2P-S6RO6fzFqOVwkgtw.jpg', 
+                        'thumbnailImageUrl' => 'https://img.youtube.com/vi/CEb0dBnPCZU/maxresdefault.jpg', 
                         'imageBackgroundColor' => '#000000', 
                         'title' => 'DAHA SONRASI', 
                         'text' => 'Saat Turkey', 
