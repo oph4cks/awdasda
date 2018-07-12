@@ -496,14 +496,7 @@ function say($keyword) {
  
     $response = Unirest\Request::get("$uri"); 
  
-    $json = json_decode($response->raw_body, true); 
-    $json = json_decode($response->raw_body, true); 
-    $json = json_decode($response->raw_body, true); 
-    $json = json_decode($response->raw_body, true); 
-    $json = json_decode($response->raw_body, true); 
-    $json = json_decode($response->raw_body, true); 
-    $json = json_decode($response->raw_body, true); 
-    $json = json_decode($response->raw_body, true); 
+    $json = json_decode($response->raw_body, true);
  $result .= $json['data']['nama'];  
     return $result; 
 }
@@ -518,10 +511,11 @@ function insta($keyword) {
     $uri = "https://ari-api.herokuapp.com/instagram?username=" . $keyword;
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
-    $result .= "┇──────────────\n";
+    $result .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n\n";
     $result .= "┇Cyͥbeͣrͫ TK\n";
-    $result .= "┇  Kicker & Security  İnstagramSystemsV.3.5.0\n";
-    $result .= "┇────────────────\n\n";
+    $result .= "┇ Kicker & Security\n";
+    $result .= "┇   İnstagramSystemsV.3.5.0\n";
+    $result .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n\n";
     $result .= "「PROFILE INSTAGRAM」\n\n";
     $result .= "『Name』 ➜ ";
     $result .= $json['result']['full_name'];
@@ -643,10 +637,10 @@ function youtubelist($keyword) {
     $uri = "https://ari-api.herokuapp.com/youtube/search?q=" . $keyword;
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
-    $parsed = "┇──────────────\n";
+    $parsed = " ▂▂▂▂▂▂▂▂▂▂▂▂n";
     $parsed = "┇Cyͥbeͣrͫ TK\n";
     $parsed = "┇  Kicker & Security YotubeSystemsV.3.5.0\n";
-    $parsed = "┇────────────────\n\n";
+    $parsed = " ▂▂▂▂▂▂▂▂▂▂▂▂n\n";
     $parsed = "YOUTUBE LIST\n\n";
     $parsed .= "ID: ";
     $parsed .= $json['result'][0]['id'];
