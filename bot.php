@@ -748,15 +748,15 @@ function shalat($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == 'Help') {
-    $text = "──────────────\n";
-    $text = "☆Grupa Davet Ettiğiniz için Teşekkürler!";
-    $text = "☆Menü için ✰Help✰ yazın\n";
-    $text = "──────────────\n";
-    $text = "Cyber TK\n";
-    $text = "      Kicker Security  ChatBotV.3.5.0\n";
-    $text = "────────────────\n";
-    $text .= "┇ Help [text]\n";
-    $text .= "┇ #help [text]\n";
+    $text .= "──────────────\n";
+    $text .= "☆Grupa Davet Ettiğiniz için Teşekkürler!\\n";
+    $text .= "☆Menü için ✰Help✰ yazın\n";
+    $text .= "──────────────\n";
+    $text .= "Cyber TK\n";
+    $text .= "      Kicker Security  ChatBotV.3.5.0\n";
+    $text .= "────────────────\n";
+    $text .= "┇ Help\n";
+    $text .= "┇ #help\n";
     $text .= "┇ @youtube [sarkı adı]\n";
     $text .= "┇ @urlkısalt [url]\n";
     $text .= "┇ @playstore [uygulama adı]\n";
@@ -1015,7 +1015,7 @@ if ($command == '#help') {
         'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/2000px-YouTube_social_white_square_%282017%29.svg.png',
         'imageBackgroundColor' => '#00FFFF',
         'title' => 'YOUTUBE',
-        'text' => 'search for videos on youtube based on keywords',
+        'text' => 'Anahtar kelimeler temelinde youtubedaki videoları arayın',
         'defaultAction' =>
         array (
           'type' => 'uri',
@@ -1059,7 +1059,7 @@ if ($command == '#help') {
         'thumbnailImageUrl' => 'https://cdn.icon-icons.com/icons2/1238/PNG/512/smallwallclock_83790.png',
         'imageBackgroundColor' => '#00FFFF',
         'title' => 'TIME',
-        'text' => 'Finding Anime Information Based on keywords',
+        'text' => 'Anahtar Kelimeler temelinde Anime Bilgi Bulma',
         'defaultAction' =>
         array (
           'type' => 'uri',
@@ -1125,7 +1125,7 @@ if ($command == '#help') {
         'thumbnailImageUrl' => 'https://taisy0.com/wp-content/uploads/2015/07/Google-Maps.png',
         'imageBackgroundColor' => '#00FFFF',
         'title' => 'GOOGLEMAP',
-        'text' => 'Knowing Location And Coordinate Place Name',
+        'text' => 'Yeri ve Koordinat Yeri Adını bilmek',
         'defaultAction' =>
         array (
           'type' => 'uri',
@@ -1169,7 +1169,7 @@ if ($command == '#help') {
         'thumbnailImageUrl' => 'https://4vector.com/i/free-vector-cartoon-weather-icon-05-vector_018885_cartoon_weather_icon_05_vector.jpg',
         'imageBackgroundColor' => '#00FFFF',
         'title' => 'WEATHER STATUS',
-        'text' => 'Know the World Weather Forecast',
+        'text' => 'Dünya Hava Tahminini Bilin',
         'defaultAction' =>
         array (
           'type' => 'uri',
