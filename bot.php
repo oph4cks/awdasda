@@ -385,11 +385,6 @@ function githubrepo($keyword) {
 }
 function stickerlist($keyword) {
     $listnya = array(
-	    "1",
-	    "2",
-	    "3",
-	    "4",
-	    "00000",
 	    "13",
 	    "10",
 	    "402",
@@ -502,14 +497,14 @@ function say($keyword) {
     $response = Unirest\Request::get("$uri"); 
  
     $json = json_decode($response->raw_body, true); 
- $result .= $json['data']['nama']; 
- $result .= $json['data']['nama']; 
- $result .= $json['data']['nama']; 
- $result .= $json['data']['nama']; 
- $result .= $json['data']['nama']; 
- $result .= $json['data']['nama']; 
- $result .= $json['data']['nama']; 
- $result .= $json['data']['nama']; 
+    $json = json_decode($response->raw_body, true); 
+    $json = json_decode($response->raw_body, true); 
+    $json = json_decode($response->raw_body, true); 
+    $json = json_decode($response->raw_body, true); 
+    $json = json_decode($response->raw_body, true); 
+    $json = json_decode($response->raw_body, true); 
+    $json = json_decode($response->raw_body, true); 
+ $result .= $json['data']['nama'];  
     return $result; 
 }
 function instapoto($keyword) {
@@ -523,18 +518,18 @@ function insta($keyword) {
     $uri = "https://ari-api.herokuapp.com/instagram?username=" . $keyword;
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
-    $result = "┇──────────────\n";
-    $result = "┇Cyͥbeͣrͫ TK\n";
-    $result = "┇  Kicker & Security  İnstagramSystemsV.3.5.0\n";
-    $result = "┇────────────────\n\n";
-    $result = "「PROFILE INSTAGRAM」\n\n";
+    $result .= "┇──────────────\n";
+    $result .= "┇Cyͥbeͣrͫ TK\n";
+    $result .= "┇  Kicker & Security  İnstagramSystemsV.3.5.0\n";
+    $result .= "┇────────────────\n\n";
+    $result .= "「PROFILE INSTAGRAM」\n\n";
     $result .= "『Name』 ➜ ";
     $result .= $json['result']['full_name'];
-    $result .= "\n『 UserName 』: ";
+    $result .= "\n『 UserName 』➜ ";
     $result .= $json['result']['username'];
-    $result .= "\nPrivate: ";
+    $result .= "\n『 Private 』➜ ";
     $result .= $json['result']['is_private'];
-    $result .= "\n『 Follower 』: ";
+    $result .= "\n『 Follower 』➜ ";
     $result .= $json['result']['byline'];
     $result .= "\n\n https://www.instagram.com/" . $keyword;
     return $result;
