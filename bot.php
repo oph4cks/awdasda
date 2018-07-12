@@ -713,6 +713,17 @@ function send($input, $rt){
     );
     return($send);
 }
+function twitter($keyword) {
+    $uri = "https://farzain.xyz/api/twitter.php?apikey=9YzAAXsDGYHWFRf6gWzdG5EQECW7oo&id=";
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    $result = "「Twitter Result」\n\n";
+    $result .= "DisplayName: ";
+    $result .= $json[0]['user']['name'];
+    $result .= "UserName: ";
+    $result .= $json[0]['user']['screen_name'];
+    return $result;
+}
 function shalat($keyword) {
     $uri = "https://time.siswadi.com/pray/" . $keyword;
     $response = Unirest\Request::get("$uri");
@@ -764,6 +775,7 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "┇ #imagerenkli\n";
     $text .= "┇ #kıble\n";
     $text .= "┇ #instagram\n";
+    $text .= "┇ #twitter\n";
     $text .= "┇ #bot\n";
     $text .= "┇ #owner\n";
     $text .= "┇ #say [txt]\n";
@@ -820,6 +832,20 @@ if($message['type']=='text') {
                     'latitude' => $result['latitude'],
                     'longitude' => $result['longitude']
                 ),
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+	    if ($command == '#twitter') {
+        $result = twitter($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
             )
         );
     }
@@ -1293,8 +1319,10 @@ if($message['type']=='text') {
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Video',
-				            'text' => '/yt-video https://www.youtube.com/watch?v='.$result['a1'],
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
 				          ),
 				          1 => 
 				          array (
@@ -1314,8 +1342,10 @@ if($message['type']=='text') {
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Video',
-				            'text' => '/yt-video https://www.youtube.com/watch?v='.$result['a2'],
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
 				          ),
 				          1 => 
 				          array (
@@ -1335,8 +1365,10 @@ if($message['type']=='text') {
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Video',
-				            'text' => '/yt-video https://www.youtube.com/watch?v='.$result['a3'],
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
 				          ),
 				          1 => 
 				          array (
@@ -1356,8 +1388,10 @@ if($message['type']=='text') {
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Video',
-				            'text' => '/yt-video https://www.youtube.com/watch?v='.$result['a4'],
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
 				          ),
 				          1 => 
 				          array (
@@ -1377,8 +1411,10 @@ if($message['type']=='text') {
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Video',
-				            'text' => '/yt-video https://www.youtube.com/watch?v='.$result['a5'],
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
 				          ),
 				          1 => 
 				          array (
@@ -1398,8 +1434,10 @@ if($message['type']=='text') {
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Video',
-				            'text' => '/yt-video https://www.youtube.com/watch?v='.$result['a6'],
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
 				          ),
 				          1 => 
 				          array (
@@ -1419,8 +1457,10 @@ if($message['type']=='text') {
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Video',
-				            'text' => '/yt-video https://www.youtube.com/watch?v='.$result['a7'],
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
 				          ),
 				          1 => 
 				          array (
@@ -1440,8 +1480,10 @@ if($message['type']=='text') {
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Video',
-				            'text' => '/yt-video https://www.youtube.com/watch?v='.$result['a8'],
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
 				          ),
 				          1 => 
 				          array (
@@ -1456,21 +1498,6 @@ if($message['type']=='text') {
 				    'imageSize' => 'cover',
 				  ),
 				)		
-            )
-        );
-}
-if ($command == '/yt-video') {
-
-        $result = yt($options);
-		$results = yt_pict($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                'type' => 'video', 
-                'originalContentUrl' => $result, 
-                'previewImageUrl' => $results, 
-                )
             )
         );
 }
