@@ -1332,23 +1332,21 @@ if($message['type']=='text') {
 				            'label' => 'Videoya bak',
 				            'uri' => 'https://youtu.be/'.$result['a1'],
 				          ),
+				          2 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'uri' => 'http://line.me/ti/p/~cybertk0',
+				          ),
 				        ),
 				      ),
-              2 => 
-              array (
-                'type' => 'uri',
-                'label' => 'Cyͥbeͣrͫ TK',
-                'uri' => 'http://line.me/ti/p/~cybertk0',
-              ),
-            ),
-          ),
-          1 => 
-          array (
-            'thumbnailImageUrl' => $result['c2'],
-            'imageBackgroundColor' => '#000000',
-            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b2'], 0, 47)).'...',
-            'actions' => 
-            array (
+				      1 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c2'],
+				        'imageBackgroundColor' => '#000000',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b2'], 0, 47)).'...',
+				        'actions' => 
+				        array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
@@ -1360,25 +1358,23 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a1'],
+				            'uri' => 'https://youtu.be/'.$result['a2'],
+				          ),
+				          2 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'uri' => 'http://line.me/ti/p/~cybertk0',
 				          ),
 				        ),
 				      ),
-              2 => 
-              array (
-                'type' => 'uri',
-                'label' => 'Cyͥbeͣrͫ TK',
-                'uri' => 'http://line.me/ti/p/~cybertk0',
-              ),
-            ),
-          ),
-          2 => 
-          array (
-            'thumbnailImageUrl' => $result['c3'],
-            'imageBackgroundColor' => '#FFFFFF',
-            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b3'], 0, 47)).'...',
-            'actions' => 
-            array (
+				      2 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c3'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b3'], 0, 47)).'...',
+				        'actions' => 
+				        array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
@@ -1390,25 +1386,23 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a1'],
+				            'uri' => 'https://youtu.be/'.$result['a3'],
+				          ),
+				          2 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'uri' => 'http://line.me/ti/p/~cybertk0',
 				          ),
 				        ),
-				      ),
-              2 => 
-              array (
-                'type' => 'uri',
-                'label' => 'Cyͥbeͣrͫ TK',
-                'uri' => 'http://line.me/ti/p/~cybertk0',
-              ),
-            ),
-          ),					  
-          3 => 
-          array (
-            'thumbnailImageUrl' => $result['c4'],
-            'imageBackgroundColor' => '#FFFFFF',
-            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b4'], 0, 47)).'...',
-            'actions' => 
-            array (
+				      ),			  
+				      3 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c4'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b4'], 0, 47)).'...',
+				        'actions' => 
+				        array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
@@ -1420,25 +1414,23 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a1'],
+				            'uri' => 'https://youtu.be/'.$result['a4'],
+				          ),
+				          2 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'uri' => 'http://line.me/ti/p/~cybertk0',
 				          ),
 				        ),
 				      ),
-              2 => 
-              array (
-                'type' => 'uri',
-                'label' => 'Cyͥbeͣrͫ TK',
-                'uri' => 'http://line.me/ti/p/~cybertk0',
-              ),
-            ),
-          ),
-          4 => 
-          array (
-            'thumbnailImageUrl' => $result['c5'],
-            'imageBackgroundColor' => '#FFFFFF',
-            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b5'], 0, 47)).'...',
-            'actions' => 
-            array (
+				      4 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c5'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b5'], 0, 47)).'...',
+				        'actions' => 
+				        array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
@@ -1450,25 +1442,23 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a1'],
+				            'uri' => 'https://youtu.be/'.$result['a5'],
+				          ),
+				          2 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'uri' => 'http://line.me/ti/p/~cybertk0',
 				          ),
 				        ),
 				      ),
-              2 => 
-              array (
-                'type' => 'uri',
-                'label' => 'Cyͥbeͣrͫ TK',
-                'uri' => 'http://line.me/ti/p/~cybertk0',
-              ),
-            ),
-          ),
-          5 => 
-          array (
-            'thumbnailImageUrl' => $result['c6'],
-            'imageBackgroundColor' => '#FFFFFF',
-            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b6'], 0, 47)).'...',
-            'actions' => 
-            array (
+				      5 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c6'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b6'], 0, 47)).'...',
+				        'actions' => 
+				        array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
@@ -1480,25 +1470,23 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a1'],
+				            'uri' => 'https://youtu.be/'.$result['a6'],
+				          ),
+				          2 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'uri' => 'http://line.me/ti/p/~cybertk0',
 				          ),
 				        ),
-				      ),
-              2 => 
-              array (
-                'type' => 'uri',
-                'label' => 'Cyͥbeͣrͫ TK',
-                'uri' => 'http://line.me/ti/p/~cybertk0',
-              ),
-            ),
-          ),					  
-          6 => 
-          array (
-            'thumbnailImageUrl' => $result['c7'],
-            'imageBackgroundColor' => '#FFFFFF',
-            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b7'], 0, 47)).'...',
-            'actions' => 
-            array (
+				      ),				  
+				      6 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c7'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b7'], 0, 47)).'...',
+				        'actions' => 
+				        array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
@@ -1510,25 +1498,23 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a1'],
+				            'uri' => 'https://youtu.be/'.$result['a7'],
+				          ),
+				          2 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'uri' => 'http://line.me/ti/p/~cybertk0',
 				          ),
 				        ),
-				      ),
-              2 => 
-              array (
-                'type' => 'uri',
-                'label' => 'Cyͥbeͣrͫ TK',
-                'uri' => 'http://line.me/ti/p/~cybertk0',
-              ),
-            ),
-          ),					  
-          7 => 
-          array (
-            'thumbnailImageUrl' => $result['c8'],
-            'imageBackgroundColor' => '#FFFFFF',
-            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b8'], 0, 47)).'...',
-            'actions' => 
-            array (
+				      ),				  
+				      7 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c8'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b8'], 0, 47)).'...',
+				        'actions' => 
+				        array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
@@ -1540,24 +1526,23 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a1'],
+				            'uri' => 'https://youtu.be/'.$result['a8'],
+				          ),
+				          2 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Cyͥbeͣrͫ TK',
+				            'uri' => 'http://line.me/ti/p/~cybertk0',
 				          ),
 				        ),
 				      ),
-              2 => 
-              array (
-                'type' => 'uri',
-                'label' => 'Cyͥbeͣrͫ TK',
-                'uri' => 'http://line.me/ti/p/~cybertk0',
-              ),
             ),
-          ),
-        'imageAspectRatio' => 'rectangle',
-        'imageSize' => 'cover',
-      ),
-    )		
-        )
-    );
+				    'imageAspectRatio' => 'rectangle',
+				    'imageSize' => 'cover',
+				  ),
+				)		
+            )
+        );
 }
 if($message['type']=='text') {
 	    if ($command == '@gitclone') {
