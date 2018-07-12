@@ -744,7 +744,19 @@ function shalat($keyword) {
 	  $result .= $json['data']['Isha'];
     return $result;
 }
-#-------------------------[Function]-------------------------#
+function cloud($keyword) {
+    $uri = "https://farzain.xyz/api/premium/soundcloud.php?apikey=ag73837ung43838383jdhdhd&id=" . $keyword;
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    
+    $result['id']    .= $json['result'][0]['id'];
+    $result['judul'] .= $json['result'][0]['title'];
+    $result['link']  .= $json['result'][0]['url'];
+    $result['audio'] .= $json['result'][0]['url_download'];
+    $result['icon']  .= $json['result'][0]['img'];
+	
+    return $result;
+}
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == 'Help') {
@@ -777,6 +789,7 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "┇ #imagerenkli\n";
     $text .= "┇ #kıble\n";
     $text .= "┇ #instagram\n";
+    $text .= "┇ #soundcloud\n";
     $text .= "┇ #twitter\n";
     $text .= "┇ #bot\n";
     $text .= "┇ #owner\n";
@@ -795,6 +808,32 @@ if ($type == 'join' || $command == 'Help') {
             )
         )
     );
+}
+if($message['type']=='text') {
+	    if ($command == '#soundcloud' || $command == '#Soundcloud') {
+        $result = cloud($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+		    array(
+                  'type' => 'image',
+                  'originalContentUrl' => $result['icon'],
+                  'previewImageUrl' => $result['icon']
+                ),
+                array(
+                    'type' => 'text',
+                    'text' => 'ID: '.$result['id'].'
+TITLE: '. $result['judul'].'
+URL: '. $result['link']
+                ),
+		    array(
+                  'type' => 'audio',
+                  'originalContentUrl' => $result['audio'],
+                  'duration' => 60000
+                )
+            )
+        );
+    }
 }
 if($message['type']=='text') {
 	    if ($command == '#hava') {
