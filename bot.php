@@ -519,7 +519,7 @@ function insta($keyword) {
     $result = "┇──────────────\n";
     $result = "┇Cyͥbeͣrͫ TK\n";
     $result = "┇  Kicker & Security  İnstagramSystemsV.3.5.0\n";
-    $result = "┇────────────────\n\n"
+    $result = "┇────────────────\n\n";
     $result = "「PROFILE INSTAGRAM」\n\n";
     $result .= "『Name』 ➜ ";
     $result .= $json['result']['full_name'];
