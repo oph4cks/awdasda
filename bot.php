@@ -231,13 +231,14 @@ function film_syn($keyword) {
 	$result .= $json['Plot'];
     return $result;
 }
-function leave_room($keyword]
+function leave_room($keyword) {
     $response = $client->leaveRoom('groupId');
     $response = Unirest\Request::get("$response");    
                     
     $json = json_decode($response->raw_body, true);
     $result = "by by";
       return $result;
+}  
 #-------------------------[Function]-------------------------#
 function film($keyword) {
     $uri = "http://www.omdbapi.com/?t=" . $keyword . '&plot=full&apikey=d5010ffe';
