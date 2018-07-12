@@ -749,8 +749,10 @@ function shalat($keyword) {
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == 'Help') {
     $text .= "┇──────────────\n";
-    $text .= "┇☆Grupa Davet Ettiğiniz için Teşekkürler!\n";
-    $text .= "┇☆Menü için ✰Help✰ & ✰#help✰  yazın\n";
+    $text .= "┇☆Grupa Davet Ettiğiniz için\n";
+    $text .= "┇☆Teşekkürler!\n";
+    $text .= "┇☆Yazılı Menü için ✰Help✰\n";
+    $text .= "┇☆Görsel Menü için ✰#help✰\n";
     $text .= "┇──────────────\n";
     $text .= "┇Cyͥbeͣrͫ TK\n";
     $text .= "┇      Kicker Security  ChatBotV.3.5.0\n";
@@ -780,10 +782,10 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "┇ #owner\n";
     $text .= "┇ #say [txt]\n";
     $text .= "┇────────────────\n\n";
+    $text .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n\n";
+    $text .= "❚⊛[Chat-Bot-Creator ↓]\n";
+    $text .= "❚⊛『http://line.me/ti/p/~cybertk0』\n";
     $text .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n";
-    $text .= "│⊛[Chat-Bot-Creator ↓]\n";
-    $text .= "│⊛『http://line.me/ti/p/~cybertk0』\n";
-    $text .= " ▔▔▔▔▔▔▔▔▔▔▔▔\n";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
