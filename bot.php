@@ -644,7 +644,7 @@ function youtubelist($keyword) {
     $parsed = "┇──────────────\n";
     $parsed = "┇Cyͥbeͣrͫ TK\n";
     $parsed = "┇  Kicker & Security YotubeSystemsV.3.5.0\n";
-    $parsed = "┇────────────────\n\n"
+    $parsed = "┇────────────────\n\n";
     $parsed = "YOUTUBE LIST\n\n";
     $parsed .= "ID: ";
     $parsed .= $json['result'][0]['id'];
