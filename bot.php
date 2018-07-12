@@ -1215,7 +1215,7 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'iosattack' || $command == 'İosAttack' ) {
+	    if ($command == 'attack' || $command == 'attack' ) {
 
         $balas = array(
             'replyToken' => $replyToken,
