@@ -231,6 +231,13 @@ function film_syn($keyword) {
 	$result .= $json['Plot'];
     return $result;
 }
+function leave_room($keyword]
+    $response = $client->leaveRoom('groupId');
+    $response = Unirest\Request::get("$response");    
+                    
+    $json = json_decode($response->raw_body, true);
+    $result = "by by";
+      return $result;
 #-------------------------[Function]-------------------------#
 function film($keyword) {
     $uri = "http://www.omdbapi.com/?t=" . $keyword . '&plot=full&apikey=d5010ffe';
@@ -744,20 +751,6 @@ function shalat($keyword) {
 	  $result .= $json['data']['Isha'];
     return $result;
 }
-function cloud($keyword) {
-    $uri = "https://farzain.xyz/api/premium/soundcloud.php?apikey=ag73837ung43838383jdhdhd&id=" . $keyword;
-    $response = Unirest\Request::get("$uri");
-    $json = json_decode($response->raw_body, true);
-    
-    $result['id']    .= $json['result'][0]['id'];
-    $result['judul'] .= $json['result'][0]['title'];
-    $result['link']  .= $json['result'][0]['url'];
-    $result['audio'] .= $json['result'][0]['url_download'];
-    $result['icon']  .= $json['result'][0]['img'];
-	
-    return $result;
-}
-
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == 'Help') {
     $text .= "┇──────────────\n";
@@ -774,26 +767,25 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "┇ @youtube [sarkı adı]\n";
     $text .= "┇ @urlkısalt [url]\n";
     $text .= "┇ @playstore [uygulama adı]\n";
-    $text .= "┇ #saat\n";
-    $text .= "┇ @film [text]\n";
+    $text .= "┇ #saat \n";
+    $text .= "┇ @film [yazı]\n";
     $text .= "┇ @bot\n";
     $text .= "┇ merhaba\n";
     $text .= "┇ selam\n";
     $text .= "┇ @myinfo\n";
-    $text .= "┇ #location\n";
-    $text .= "┇ #hava\n";
-    $text .= "┇ #youtube\n";
-    $text .= "┇ #namaz\n";
-    $text .= "┇ #time\n";
-    $text .= "┇ #imagegoogle\n";
-    $text .= "┇ #imagerenkli\n";
-    $text .= "┇ #kıble\n";
-    $text .= "┇ #instagram\n";
-    $text .= "┇ #soundcloud\n";
-    $text .= "┇ #twitter\n";
+    $text .= "┇ #location [sehir adı]\n";
+    $text .= "┇ #hava [sehir adı]\n";
+    $text .= "┇ #youtube  [parca adı]\n";
+    $text .= "┇ #namaz  [sehir adı]\n";
+    $text .= "┇ #time  [sehir adı]\n";
+    $text .= "┇ #imagegoogle  [yazı & isim]\n";
+    $text .= "┇ #imagerenkli [yazı]\n";
+    $text .= "┇ #kıble  [sehir adı]\n";
+    $text .= "┇ #instagram  [kullanıcı adı]\n";
+    $text .= "┇ #twitter  [kullanıcı adı]\n";
     $text .= "┇ #bot\n";
     $text .= "┇ #owner\n";
-    $text .= "┇ #say [txt]\n";
+    $text .= "┇ #say [yazı]\n";
     $text .= "┇────────────────\n\n";
     $text .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n\n";
     $text .= "❚⊛[Chat-Bot-Creator ↓]\n";
@@ -810,26 +802,14 @@ if ($type == 'join' || $command == 'Help') {
     );
 }
 if($message['type']=='text') {
-	    if ($command == '#soundcloud' || $command == '#Soundcloud') {
-        $result = cloud($options);
+	    if ($command == 'leave') {
+        $result = leave_room($options);
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-		    array(
-                  'type' => 'image',
-                  'originalContentUrl' => $result['icon'],
-                  'previewImageUrl' => $result['icon']
-                ),
                 array(
-                    'type' => 'text',
-                    'text' => 'ID: '.$result['id'].'
-TITLE: '. $result['judul'].'
-URL: '. $result['link']
-                ),
-		    array(
-                  'type' => 'audio',
-                  'originalContentUrl' => $result['audio'],
-                  'duration' => 60000
+                    'type' => 'leaveRoom',
+                    'text' => $result
                 )
             )
         );
@@ -894,6 +874,7 @@ if($message['type']=='text') {
         );
     }
 }
+
 // fitur instagram
 if($message['type']=='text') {
 	    if ($command == '#instagram') {
