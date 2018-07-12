@@ -503,50 +503,12 @@ function say($keyword) {
  
     $json = json_decode($response->raw_body, true); 
  $result .= $json['data']['nama']; 
-    return $result; 
-}
-function saytwo($keyword) { 
-    $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
- 
-    $response = Unirest\Request::get("$uri"); 
- 
-    $json = json_decode($response->raw_body, true); 
  $result .= $json['data']['nama']; 
-    return $result; 
-}
-function saythree($keyword) { 
-    $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
- 
-    $response = Unirest\Request::get("$uri"); 
- 
-    $json = json_decode($response->raw_body, true); 
  $result .= $json['data']['nama']; 
-    return $result; 
-}
-function sayfour($keyword) { 
-    $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
- 
-    $response = Unirest\Request::get("$uri"); 
- 
-    $json = json_decode($response->raw_body, true); 
  $result .= $json['data']['nama']; 
-    return $result; 
-}
-function sayfive($keyword) { 
-    $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
- 
-    $response = Unirest\Request::get("$uri"); 
- 
-    $json = json_decode($response->raw_body, true); 
  $result .= $json['data']['nama']; 
-    return $result; 
-}
-function saysix($keyword) { 
-    $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
- 
-    $response = Unirest\Request::get("$uri"); 
- 
-    $json = json_decode($response->raw_body, true); 
+ $result .= $json['data']['nama']; 
+ $result .= $json['data']['nama']; 
  $result .= $json['data']['nama']; 
     return $result; 
 }
@@ -946,11 +908,6 @@ if($message['type']=='text') {
 if($message['type']=='text') {
 	    if ($command == '#say') {
         $result = say($options);
-        $result = saytwo($options);
-        $result = saythree($options);
-        $result = sayfour($options);
-        $result = sayfive($options);
-        $result = saysix($options);
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
