@@ -748,13 +748,13 @@ function shalat($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == 'Help') {
-    $text .= "──────────────\n";
-    $text .= "☆Grupa Davet Ettiğiniz için Teşekkürler!\\n";
-    $text .= "☆Menü için ✰Help✰ yazın\n";
-    $text .= "──────────────\n";
-    $text .= "Cyber TK\n";
-    $text .= "      Kicker Security  ChatBotV.3.5.0\n";
-    $text .= "────────────────\n";
+    $text .= "┇──────────────\n";
+    $text .= "┇☆Grupa Davet Ettiğiniz için Teşekkürler!\n";
+    $text .= "┇☆Menü için ✰Help✰ & ✰#help✰  yazın\n";
+    $text .= "┇──────────────\n";
+    $text .= "┇Cyͥbeͣrͫ TK\n";
+    $text .= "┇      Kicker Security  ChatBotV.3.5.0\n";
+    $text .= "┇────────────────\n";
     $text .= "┇ Help\n";
     $text .= "┇ #help\n";
     $text .= "┇ @youtube [sarkı adı]\n";
@@ -779,8 +779,11 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "┇ #bot\n";
     $text .= "┇ #owner\n";
     $text .= "┇ #say [txt]\n";
-    $text .= "[Contact CREATOR]\n";
-    $text .= "『http://line.me/ti/p/~cybertk0』\n";
+    $text .= "┇────────────────\n\n";
+    $text .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n";
+    $text .= "│⊛[Chat-Bot-Creator ↓]\n";
+    $text .= "│⊛『http://line.me/ti/p/~cybertk0』\n";
+    $text .= " ▔▔▔▔▔▔▔▔▔▔▔▔\n";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -1319,7 +1322,6 @@ if($message['type']=='text') {
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Cyͥbeͣrͫ TK',
 				            'label' => 'Tıkla Video İçin',
 				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
 				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
@@ -1332,17 +1334,24 @@ if($message['type']=='text') {
 				          ),
 				        ),
 				      ),
-				      1 => 
-				      array (
-				        'thumbnailImageUrl' => $result['c2'],
-				        'imageBackgroundColor' => '#000000',
-				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b2'], 0, 47)).'...',
-				        'actions' => 
-				        array (
+              2 => 
+              array (
+                'type' => 'uri',
+                'label' => 'Cyͥbeͣrͫ TK',
+                'uri' => 'http://line.me/ti/p/~cybertk0',
+              ),
+            ),
+          ),
+          1 => 
+          array (
+            'thumbnailImageUrl' => $result['c2'],
+            'imageBackgroundColor' => '#000000',
+            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b2'], 0, 47)).'...',
+            'actions' => 
+            array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Cyͥbeͣrͫ TK',
 				            'label' => 'Tıkla Video İçin',
 				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
 				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
@@ -1351,67 +1360,28 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a2'],
-				          ),
-				        ),
-				      ),	
-				      2 => 
-				      array (
-				        'thumbnailImageUrl' => $result['c3'],
-				        'imageBackgroundColor' => '#FFFFFF',
-				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b3'], 0, 47)).'...',
-				        'actions' => 
-				        array (
-				          0 => 
-				          array (
-				            'type' => 'message', 
-				            'label' => 'Cyͥbeͣrͫ TK',
-				            'label' => 'Tıkla Video İçin',
-				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
-				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
-				          ),
-				          1 => 
-				          array (
-				            'type' => 'uri',
-				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a3'],
-				          ),
-				        ),
-				      ),					  
-				      3 => 
-				      array (
-				        'thumbnailImageUrl' => $result['c4'],
-				        'imageBackgroundColor' => '#FFFFFF',
-				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b4'], 0, 47)).'...',
-				        'actions' => 
-				        array (
-				          0 => 
-				          array (
-				            'type' => 'message', 
-				            'label' => 'Cyͥbeͣrͫ TK',
-				            'label' => 'Tıkla Video İçin',
-				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
-				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
-				          ),
-				          1 => 
-				          array (
-				            'type' => 'uri',
-				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a4'],
+				            'uri' => 'https://youtu.be/'.$result['a1'],
 				          ),
 				        ),
 				      ),
-				      4 => 
-				      array (
-				        'thumbnailImageUrl' => $result['c5'],
-				        'imageBackgroundColor' => '#FFFFFF',
-				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b5'], 0, 47)).'...',
-				        'actions' => 
-				        array (
+              2 => 
+              array (
+                'type' => 'uri',
+                'label' => 'Cyͥbeͣrͫ TK',
+                'uri' => 'http://line.me/ti/p/~cybertk0',
+              ),
+            ),
+          ),
+          2 => 
+          array (
+            'thumbnailImageUrl' => $result['c3'],
+            'imageBackgroundColor' => '#FFFFFF',
+            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b3'], 0, 47)).'...',
+            'actions' => 
+            array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Cyͥbeͣrͫ TK',
 				            'label' => 'Tıkla Video İçin',
 				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
 				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
@@ -1420,21 +1390,28 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a5'],
+				            'uri' => 'https://youtu.be/'.$result['a1'],
 				          ),
 				        ),
 				      ),
-				      5 => 
-				      array (
-				        'thumbnailImageUrl' => $result['c6'],
-				        'imageBackgroundColor' => '#FFFFFF',
-				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b6'], 0, 47)).'...',
-				        'actions' => 
-				        array (
+              2 => 
+              array (
+                'type' => 'uri',
+                'label' => 'Cyͥbeͣrͫ TK',
+                'uri' => 'http://line.me/ti/p/~cybertk0',
+              ),
+            ),
+          ),					  
+          3 => 
+          array (
+            'thumbnailImageUrl' => $result['c4'],
+            'imageBackgroundColor' => '#FFFFFF',
+            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b4'], 0, 47)).'...',
+            'actions' => 
+            array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Cyͥbeͣrͫ TK',
 				            'label' => 'Tıkla Video İçin',
 				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
 				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
@@ -1443,21 +1420,28 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a6'],
+				            'uri' => 'https://youtu.be/'.$result['a1'],
 				          ),
 				        ),
-				      ),					  
-				      6 => 
-				      array (
-				        'thumbnailImageUrl' => $result['c7'],
-				        'imageBackgroundColor' => '#FFFFFF',
-				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b7'], 0, 47)).'...',
-				        'actions' => 
-				        array (
+				      ),
+              2 => 
+              array (
+                'type' => 'uri',
+                'label' => 'Cyͥbeͣrͫ TK',
+                'uri' => 'http://line.me/ti/p/~cybertk0',
+              ),
+            ),
+          ),
+          4 => 
+          array (
+            'thumbnailImageUrl' => $result['c5'],
+            'imageBackgroundColor' => '#FFFFFF',
+            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b5'], 0, 47)).'...',
+            'actions' => 
+            array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Cyͥbeͣrͫ TK',
 				            'label' => 'Tıkla Video İçin',
 				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
 				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
@@ -1466,21 +1450,28 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a7'],
+				            'uri' => 'https://youtu.be/'.$result['a1'],
 				          ),
 				        ),
-				      ),					  
-				      7 => 
-				      array (
-				        'thumbnailImageUrl' => $result['c8'],
-				        'imageBackgroundColor' => '#FFFFFF',
-				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b8'], 0, 47)).'...',
-				        'actions' => 
-				        array (
+				      ),
+              2 => 
+              array (
+                'type' => 'uri',
+                'label' => 'Cyͥbeͣrͫ TK',
+                'uri' => 'http://line.me/ti/p/~cybertk0',
+              ),
+            ),
+          ),
+          5 => 
+          array (
+            'thumbnailImageUrl' => $result['c6'],
+            'imageBackgroundColor' => '#FFFFFF',
+            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b6'], 0, 47)).'...',
+            'actions' => 
+            array (
 				          0 => 
 				          array (
 				            'type' => 'message', 
-				            'label' => 'Cyͥbeͣrͫ TK',
 				            'label' => 'Tıkla Video İçin',
 				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
 				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
@@ -1489,17 +1480,84 @@ if($message['type']=='text') {
 				          array (
 				            'type' => 'uri',
 				            'label' => 'Videoya bak',
-				            'uri' => 'https://youtu.be/'.$result['a8'],
+				            'uri' => 'https://youtu.be/'.$result['a1'],
 				          ),
 				        ),
-				      ),					  
-				    ),
-				    'imageAspectRatio' => 'rectangle',
-				    'imageSize' => 'cover',
-				  ),
-				)		
-            )
-        );
+				      ),
+              2 => 
+              array (
+                'type' => 'uri',
+                'label' => 'Cyͥbeͣrͫ TK',
+                'uri' => 'http://line.me/ti/p/~cybertk0',
+              ),
+            ),
+          ),					  
+          6 => 
+          array (
+            'thumbnailImageUrl' => $result['c7'],
+            'imageBackgroundColor' => '#FFFFFF',
+            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b7'], 0, 47)).'...',
+            'actions' => 
+            array (
+				          0 => 
+				          array (
+				            'type' => 'message', 
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
+				          ),
+				          1 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Videoya bak',
+				            'uri' => 'https://youtu.be/'.$result['a1'],
+				          ),
+				        ),
+				      ),
+              2 => 
+              array (
+                'type' => 'uri',
+                'label' => 'Cyͥbeͣrͫ TK',
+                'uri' => 'http://line.me/ti/p/~cybertk0',
+              ),
+            ),
+          ),					  
+          7 => 
+          array (
+            'thumbnailImageUrl' => $result['c8'],
+            'imageBackgroundColor' => '#FFFFFF',
+            'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b8'], 0, 47)).'...',
+            'actions' => 
+            array (
+				          0 => 
+				          array (
+				            'type' => 'message', 
+				            'label' => 'Tıkla Video İçin',
+				            'text' => 'Youtube videosu İzlemek istiyorsan Tıkla Lütfen videoya',
+				            'text' => 'https://www.youtube.com/watch?v='.$result['a1'],
+				          ),
+				          1 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Videoya bak',
+				            'uri' => 'https://youtu.be/'.$result['a1'],
+				          ),
+				        ),
+				      ),
+              2 => 
+              array (
+                'type' => 'uri',
+                'label' => 'Cyͥbeͣrͫ TK',
+                'uri' => 'http://line.me/ti/p/~cybertk0',
+              ),
+            ),
+          ),
+        'imageAspectRatio' => 'rectangle',
+        'imageSize' => 'cover',
+      ),
+    )		
+        )
+    );
 }
 if($message['type']=='text') {
 	    if ($command == '@gitclone') {
