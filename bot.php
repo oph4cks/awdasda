@@ -1743,7 +1743,7 @@ if ($command == '#selamunaleykum') {
     array (
         0 =>
       array (
-        'thumbnailImageUrl' => 'https://image.prntscr.com/image/dPfWToj6QEWfADWJxP2axA.jpg',
+        'thumbnailImageUrl' => 'https://s3.amazonaws.com/urgeio-versus/photo-editor-by-aviary/front/front-1391686692704.variety.jpg',
         'imageBackgroundColor' => '#00FFFF',
         'title' => 'CyberTK Kicker & Security',
         'text' => 'CyberTKChatBot-V-3.5.0',
@@ -1763,12 +1763,14 @@ if ($command == '#selamunaleykum') {
             'type' => 'message',
             'label' => 'Line İletişim için tıkla',
             'text' => 'http://line.me/ti/p/~cybertk0',
+        'actions' =>
         array (
           1 =>
           array (
             'type' => 'message',
             'label' => 'İnstagram iletişim için Tıkla',
             'text' => 'http://line.me/ti/p/~cybertk0',
+        'actions' =>
         array (
           2 =>
           array (
