@@ -1743,9 +1743,12 @@ if ($command == '#selamunaleykum') {
     array (
         0 =>
       array (
-        'thumbnailImageUrl' => 'https://4.bp.blogspot.com/-L3sjf-JDwVQ/WUEKWMUiDqI/AAAAAAAAoYs/OzuQmmiSm-gdHZrpntvtM31asc3UAVp6wCLcBGAs/s1600/instagram-icon.jpg',
+        'thumbnailImageUrl' => 'https://image.prntscr.com/image/dPfWToj6QEWfADWJxP2axA.jpg',
         'imageBackgroundColor' => '#00FFFF',
         'title' => 'CyberTK Kicker & Security',
+        'text' => 'CyberTKChatBot-V-3.5.0',
+        'text' => 'Menüden yararlanmak için Kaydır ➜',
+        'text' => 'Creator İletişim',
         'text' => 'CyberTKChatBot-V-3.5.0',
         'defaultAction' =>
         array (
@@ -1758,8 +1761,20 @@ if ($command == '#selamunaleykum') {
           0 =>
           array (
             'type' => 'message',
-            'label' => 'İletişim için tıkla',
+            'label' => 'Line İletişim için tıkla',
             'text' => 'http://line.me/ti/p/~cybertk0',
+        array (
+          1 =>
+          array (
+            'type' => 'message',
+            'label' => 'İnstagram iletişim için Tıkla',
+            'text' => 'http://line.me/ti/p/~cybertk0',
+        array (
+          2 =>
+          array (
+            'type' => 'message',
+            'label' => 'Web sitesi İçin Tıkla',
+            'text' => 'https://cybertk-blog.wixsite.com/cybertk-officialblog/',
           ),
         ),
       ),
