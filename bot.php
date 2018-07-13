@@ -1729,7 +1729,8 @@ elseif($message['type']=='sticker'){
             ) 
         ); 
     }
-if ($command == 'Selamunaleykum' || $command == 'Selamunaleyküm' || $command == 'selamunaleyküm' || $command == 'selam' || $command == 'sa' || $command == 'merhaba' ) {    $balas = array(
+if ($command == 'Selamunaleykum' || $command == 'Selamunaleyküm' || $command == 'selamunaleyküm' || $command == 'selam' || $command == 'sa' || $command == 'merhaba' ) {    
+    $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
           array (
