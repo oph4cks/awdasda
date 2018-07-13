@@ -507,8 +507,8 @@ function insta($keyword) {
     $result .= "┇ Kicker & Security\n";
     $result .= "┇   İnstagramSystemsV.3.5.0\n";
     $result .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n\n";
-    $result .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n";
-    $result .= "▎「PROFILE INSTAGRAM」▎\n";
+    $result .= " ▂▂▂▂▂▂▂▂▂▂▂▂▂\n";
+    $result .= "▎「PROFILE INSTAGRAM」 ▎\n";
     $result .= "▔▔▔▔▔▔▔▔▔▔▔▔\n";
     $result .= "✭『İsim』 ➜ ";
     $result .= $json['result']['full_name'];
