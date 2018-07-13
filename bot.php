@@ -496,9 +496,11 @@ function say($keyword) {
  
     $response = Unirest\Request::get("$uri"); 
  
-    $json = json_decode($response->raw_body, true);
- $result .= $json['data']['nama'];  
-    return $result; 
+    $json1 = json_decode($response->raw_body, true);
+ $result1 .= $json1['data']['nama'];  
+    $json1 = json_decode($response->raw_body, true);
+ $result2 .= $json1['data']['nama'];  
+    return $result1 + $result2; 
 }
 function instapoto($keyword) {
     $uri = "https://ari-api.herokuapp.com/instagram?username=" . $keyword;
@@ -909,8 +911,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => $result,
-                    'text' => $result2
+                    'text' => $result + $result2
                 )
             )
         );
@@ -1270,6 +1271,9 @@ Name: '.$profil->displayName.'
 Status: '.$profil->statusMessage.'
 
 Picture: '.$profil->pictureUrl.'
+
+Group: '.$profil->groupId.'
+
 
 ====[InfoProfile]===='
 									)
@@ -1632,7 +1636,7 @@ if ($command == '#saat') {
                           ), 
                         ), 
                       ), 
-					  2 =>  
+					            2 =>  
                       array ( 
                         'thumbnailImageUrl' => 'https://img.youtube.com/vi/CEb0dBnPCZU/maxresdefault.jpg', 
                         'imageBackgroundColor' => '#000000', 
@@ -1722,35 +1726,6 @@ elseif($message['type']=='sticker'){
                             'imageBackgroundColor' => '#FFFFFF', 
                             'title' => 'Tolg KR', 
                             'text' => 'Creator CyberTK', 
-                            'actions' =>  
-                            array ( 
-                              0 =>  
-                              array ( 
-                                'type' => 'uri', 
-                                'label' => 'Contact', 
-                                'uri' => 'https://line.me/ti/p/~cybertk0', 
-                              ), 
-                            ), 
-                          ), 
-                        ) 
-            ) 
-        ); 
-    }
-    if ($command == '#image') { 
-     
-        $balas = array( 
-            'replyToken' => $replyToken, 
-            'messages' => array( 
-                array ( 
-                        'type' => 'image', 
-                          'altText' => 'About Owner', 
-                          'template' =>  
-                          array ( 
-                            'type' => 'post', 
-                            'thumbnailImageUrl' => 'https://image.prntscr.com/image/eu-GLZ12Tou78kZl7sz2qQ.jpg', 
-                            'imageAspectRatio' => 'rectangle', 
-                            'imageSize' => 'cover', 
-                            'imageBackgroundColor' => '#FFFFFF', 
                             'actions' =>  
                             array ( 
                               0 =>  
