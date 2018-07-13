@@ -1729,7 +1729,7 @@ elseif($message['type']=='sticker'){
             ) 
         ); 
     }
-if ($command == 'selamunaleykum') {    
+if ($command == '#selamunaleykum') {
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -1743,32 +1743,10 @@ if ($command == 'selamunaleykum') {
     array (
         0 =>
       array (
-        'thumbnailImageUrl' => 'https://image.prntscr.com/image/dPfWToj6QEWfADWJxP2axA.jpg',
+        'thumbnailImageUrl' => 'https://4.bp.blogspot.com/-L3sjf-JDwVQ/WUEKWMUiDqI/AAAAAAAAoYs/OzuQmmiSm-gdHZrpntvtM31asc3UAVp6wCLcBGAs/s1600/instagram-icon.jpg',
         'imageBackgroundColor' => '#00FFFF',
         'title' => 'CyberTK Kicker & Security',
         'text' => 'CyberTKChatBot-V-3.5.0',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'CyberTK',
-          'uri' => 'http://line.me/ti/p/~cybertk0',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'İletişim İçin Tıkla',
-            'text' => 'http://line.me/ti/p/~cybertk0',
-          ),
-        ),
-      ),
-      1 =>
-      array (
-        'thumbnailImageUrl' => 'https://s3.amazonaws.com/urgeio-versus/photo-editor-by-aviary/front/front-1391686692704.variety.jpg',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'INSTAGRAM',
-        'text' => 'Anahtar kelimelere dayalı instagram hesap bilgilerini aramak',
         'defaultAction' =>
         array (
           'type' => 'uri',
@@ -1780,12 +1758,12 @@ if ($command == 'selamunaleykum') {
           0 =>
           array (
             'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken #instagram <kullanıcıadı>',
+            'label' => 'İletişim için tıkla',
+            'text' => 'http://line.me/ti/p/~cybertk0',
           ),
         ),
       ),
-      2 =>
+      1 =>
       array (
         'thumbnailImageUrl' => 'https://s3.amazonaws.com/urgeio-versus/photo-editor-by-aviary/front/front-1391686692704.variety.jpg',
         'imageBackgroundColor' => '#00FFFF',
@@ -1807,7 +1785,7 @@ if ($command == 'selamunaleykum') {
           ),
         ),
       ),
-      3 =>
+      2 =>
       array (
         'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/2000px-YouTube_social_white_square_%282017%29.svg.png',
         'imageBackgroundColor' => '#00FFFF',
@@ -1829,7 +1807,7 @@ if ($command == 'selamunaleykum') {
           ),
         ),
       ),
-      4 =>
+      3 =>
       array (
         'thumbnailImageUrl' => 'https://d500.epimg.net/cincodias/imagenes/2015/05/25/lifestyle/1432541958_414675_1432542807_noticia_normal.jpg',
         'imageBackgroundColor' => '#00FFFF',
@@ -1851,7 +1829,7 @@ if ($command == 'selamunaleykum') {
           ),
         ),
       ),
-      5 =>
+      4 =>
       array (
         'thumbnailImageUrl' => 'https://cdn.icon-icons.com/icons2/1238/PNG/512/smallwallclock_83790.png',
         'imageBackgroundColor' => '#00FFFF',
@@ -1873,7 +1851,7 @@ if ($command == 'selamunaleykum') {
           ),
         ),
       ),
-      6 =>
+      5 =>
       array (
         'thumbnailImageUrl' => 'https://is3-ssl.mzstatic.com/image/thumb/Purple62/v4/cc/68/6c/cc686c29-ffd2-5115-2b97-c4821b548fe3/AppIcon-1x_U007emarketing-85-220-6.png/246x0w.jpg',
         'imageBackgroundColor' => '#00FFFF',
@@ -1895,7 +1873,7 @@ if ($command == 'selamunaleykum') {
           ),
         ),
       ),
-       7 =>
+       6 =>
       array (
         'thumbnailImageUrl' => 'https://s2.bukalapak.com/img/2245927012/w-1000/Arah_Kiblat.jpg',
         'imageBackgroundColor' => '#00FFFF',
@@ -1917,7 +1895,7 @@ if ($command == 'selamunaleykum') {
           ),
         ),
       ),
-      8 =>
+      7 =>
       array (
         'thumbnailImageUrl' => 'https://taisy0.com/wp-content/uploads/2015/07/Google-Maps.png',
         'imageBackgroundColor' => '#00FFFF',
@@ -1939,7 +1917,7 @@ if ($command == 'selamunaleykum') {
           ),
         ),
       ),
-      9 =>
+      8 =>
       array (
         'thumbnailImageUrl' => 'https://st3.depositphotos.com/3921439/12696/v/950/depositphotos_126961774-stock-illustration-the-tv-icon-television-and.jpg',
         'imageBackgroundColor' => '#00FFFF',
@@ -1961,7 +1939,7 @@ if ($command == 'selamunaleykum') {
           ),
         ),
       ),
-      10 =>
+      9 =>
       array (
         'thumbnailImageUrl' => 'https://4vector.com/i/free-vector-cartoon-weather-icon-05-vector_018885_cartoon_weather_icon_05_vector.jpg',
         'imageBackgroundColor' => '#00FFFF',
