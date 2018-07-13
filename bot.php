@@ -902,12 +902,14 @@ if($message['type']=='text') {
 //fitur kata 
 if($message['type']=='text') {
 	    if ($command == '#say') {
+        $result = say($options);
         $result2 = deneme($options);
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array(
                     'type' => 'text',
+                    'text' => $result,
                     'text' => $result2
                 )
             )
@@ -1740,7 +1742,7 @@ elseif($message['type']=='sticker'){
             'replyToken' => $replyToken, 
             'messages' => array( 
                 array ( 
-                        'type' => 'image_carousel', 
+                        'type' => 'image', 
                           'altText' => 'About Owner', 
                           'template' =>  
                           array ( 
