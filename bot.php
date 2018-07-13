@@ -496,12 +496,21 @@ function say($keyword) {
  
     $response = Unirest\Request::get("$uri"); 
  
-    $json1 = json_decode($response->raw_body, true);
- $result1 .= $json1['data']['nama'];  
-    $json1 = json_decode($response->raw_body, true);
- $result2 .= $json1['data']['nama'];  
-    return $result1 + $result2; 
+    $json = json_decode($response->raw_body, true);
+ $result .= $json['data']['nama'];  
+    return $result; 
 }
+#function say($keyword) #{ 
+#    $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
+# 
+#    $response = Unirest\Request::get("$uri"); 
+# 
+#    $json1 = json_decode($response->raw_body, true);
+# $result1 .= $json1['data']['nama'];  
+#    $json1 = json_decode($response->raw_body, true);
+# $result2 .= $json1['data']['nama'];  
+#    return $result1 + $result2; 
+#}
 function instapoto($keyword) {
     $uri = "https://ari-api.herokuapp.com/instagram?username=" . $keyword;
     $response = Unirest\Request::get("$uri");
