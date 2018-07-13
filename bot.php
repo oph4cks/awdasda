@@ -482,15 +482,6 @@ function stickerlist($keyword) {
             $result = $listnya[$jaws];
     return $result;
 }
-function deneme($keyword) { 
-    $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
- 
-    $response = Unirest\Request::get("$uri"); 
- 
-    $json = json_decode($response->raw_body, true);
- $result .= $json['data']['nama'];  
-    return $result; 
-}
 function say($keyword) { 
     $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
  
@@ -500,17 +491,6 @@ function say($keyword) {
  $result .= $json['data']['nama'];  
     return $result; 
 }
-#function say($keyword) #{ 
-#    $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
-# 
-#    $response = Unirest\Request::get("$uri"); 
-# 
-#    $json1 = json_decode($response->raw_body, true);
-# $result1 .= $json1['data']['nama'];  
-#    $json1 = json_decode($response->raw_body, true);
-# $result2 .= $json1['data']['nama'];  
-#    return $result1 + $result2; 
-#}
 function instapoto($keyword) {
     $uri = "https://ari-api.herokuapp.com/instagram?username=" . $keyword;
     $response = Unirest\Request::get("$uri");
@@ -530,15 +510,15 @@ function insta($keyword) {
     $result .= " ▂▂▂▂▂▂▂▂▂▂▂▂\n";
     $result .= "▎「PROFILE INSTAGRAM」▎\n";
     $result .= "▔▔▔▔▔▔▔▔▔▔▔▔\n";
-    $result .= "֍『Name』 ➜ ";
+    $result .= "✭『İsim』 ➜ ";
     $result .= $json['result']['full_name'];
-    $result .= "\n֍『 UserName 』➜ ";
+    $result .= "\n✭『 Kullanıcıadı 』➜ ";
     $result .= $json['result']['username'];
-    $result .= "\n֍『 Private 』➜ ";
+    $result .= "\n✭『 Private 』➜ ";
     $result .= $json['result']['is_private'];
-    $result .= "\n֍『 Follower 』➜ ";
+    $result .= "\n✭『 Takipçi 』➜ ";
     $result .= $json['result']['byline'];
-    $result .= "\n\n ֍ https://www.instagram.com/" . $keyword;
+    $result .= "\n\n✭ https://www.instagram.com/" . $keyword;
     return $result;
 }
 function google_image($keyword) {
@@ -910,22 +890,6 @@ if($message['type']=='text') {
         );
     }
 }
-//fitur kata 
-if($message['type']=='text') {
-	    if ($command == '#say') {
-        $result = say($options);
-        $result2 = deneme($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => $result + $result2
-                )
-            )
-        );
-    }
-}
 //fitur gambar kiblat
 if($message['type']=='text') {
 	    if ($command == '#kıble') {
@@ -979,6 +943,22 @@ if($message['type']== 'text'){
     $filter = explode(' ', $pesan_datang);
     if($filter[0] == '#bot') {
         $balas = send(jawabs(), $replyToken);
+    }
+}
+//fitur kata 
+if($message['type']=='text') {
+	    if ($command == '#say') {
+        $result = deneme($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+                    'type' => 'text',
+                    'text' => $result
+              
+                )
+            )
+        );
     }
 }
 if ($command == '#help') {
