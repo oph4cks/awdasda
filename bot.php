@@ -755,7 +755,7 @@ function shalat($keyword) {
 	  $result .= $json['data']['Isha'];
     return $result;
 }
-function leaveGroup($groupId)
+public function leaveGroup($groupId)
     {
         return $this->httpClient->post($this->endpointBase . '/v2/bot/group/' . urlencode($groupId) . '/leave', []);
     }
@@ -1753,7 +1753,7 @@ elseif($message['type']=='sticker'){
                           'template' =>  
                           array ( 
                             'type' => 'post', 
-                            'thumbnailImageUrl' => 'https://img.youtube.com/vi/CEb0dBnPCZU/maxresdefault.jpg', 
+                            'thumbnailImageUrl' => 'https://image.prntscr.com/image/eu-GLZ12Tou78kZl7sz2qQ.jpg', 
                             'imageAspectRatio' => 'rectangle', 
                             'imageSize' => 'cover', 
                             'imageBackgroundColor' => '#FFFFFF', 
