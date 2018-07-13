@@ -91,19 +91,6 @@ function ig_dp($keyword) {
     $result = $json['profile_pic_url_hd']; 
     return $result; 
 }
-function apakah($keyword){
-    $list_jwb = array(
-		'Ya',
-		'Tidak',
-		'Bisa jadi',
-		'Mungkin',
-		'Tentu tidak',
-		'Coba tanya lagi'
-		);
-    $jaws = array_rand($list_jwb);
-    $jawab = $list_jwb[$jaws];
-    return($jawab);
-}
 function tts($keyword) { 
     $uri = "https://translate.google.com/translate_tts?ie=UTF-8&tl=id-ID&client=tw-ob&q=" . $keyword; 
 
@@ -495,6 +482,15 @@ function stickerlist($keyword) {
             $result = $listnya[$jaws];
     return $result;
 }
+function deneme($keyword) { 
+    $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
+ 
+    $response = Unirest\Request::get("$uri"); 
+ 
+    $json = json_decode($response->raw_body, true);
+ $result .= $json['data']['nama'];  
+    return $result; 
+}
 function say($keyword) { 
     $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=" . $keyword . "&tanggal=10-05-2003"; 
  
@@ -755,10 +751,6 @@ function shalat($keyword) {
 	  $result .= $json['data']['Isha'];
     return $result;
 }
-public function leaveGroup($groupId)
-    {
-        return $this->httpClient->post($this->endpointBase . '/v2/bot/group/' . urlencode($groupId) . '/leave', []);
-    }
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == 'Help') {
     $text .= "┇──────────────\n";
@@ -910,13 +902,13 @@ if($message['type']=='text') {
 //fitur kata 
 if($message['type']=='text') {
 	    if ($command == '#say') {
-        $result = say($options);
+        $result2 = deneme($options);
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => $result
+                    'text' => $result2
                 )
             )
         );
