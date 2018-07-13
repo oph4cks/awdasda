@@ -1748,8 +1748,8 @@ if ($command == '#selamunaleykum') {
         'title' => 'CyberTK Kicker & Security',
         'text' => 'CyberTKChatBot-V-3.5.0',
         'text' => 'Menüden yararlanmak için Kaydır ➜',
-        'text' => 'Creator İletişim',
         'text' => 'CyberTKChatBot-V-3.5.0',
+        'text' => 'Creator İletişim ▼',
         'defaultAction' =>
         array (
           'type' => 'uri',
@@ -1980,6 +1980,10 @@ if ($command == '#selamunaleykum') {
     'imageAspectRatio' => 'rectangle',
     'imageSize' => 'cover',
   ),
+)
+)
+)
+)
 )
 )
 );
