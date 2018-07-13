@@ -1743,9 +1743,9 @@ if ($command == 'selamunaleykum') {
     array (
         0 =>
       array (
-        'thumbnailImageUrl' => 'https://4.bp.blogspot.com/-L3sjf-JDwVQ/WUEKWMUiDqI/AAAAAAAAoYs/OzuQmmiSm-gdHZrpntvtM31asc3UAVp6wCLcBGAs/s1600/instagram-icon.jpg',
+        'thumbnailImageUrl' => 'https://image.prntscr.com/image/dPfWToj6QEWfADWJxP2axA.jpg',
         'imageBackgroundColor' => '#00FFFF',
-        'title' => 'Cyͥbeͣrͫ TK Kicker & Security',
+        'title' => 'CyberTK Kicker & Security',
         'text' => 'CyberTKChatBot-V-3.5.0',
         'defaultAction' =>
         array (
