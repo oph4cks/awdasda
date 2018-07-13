@@ -1746,10 +1746,7 @@ if ($command == '#selamunaleykum') {
         'thumbnailImageUrl' => 'https://image.prntscr.com/image/dPfWToj6QEWfADWJxP2axA.jpg',
         'imageBackgroundColor' => '#00FFFF',
         'title' => 'CyberTK Kicker & Security',
-        'text' => 'CyberTKChatBot-V-3.5.0',
         'text' => 'Menüden yararlanmak için Kaydır',
-        'text' => 'CyberTKChatBot-V-3.5.0',
-        'text' => 'Creator İletişim',
         'defaultAction' =>
         array (
           'type' => 'uri',
