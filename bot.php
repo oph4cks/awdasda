@@ -1837,7 +1837,7 @@ if($message['type']=='text') {
     }
 }
 
-#elseif($message['type']=='sticker'){	
+#elseif($message['type']=='sticker')#{	
 #	$result = stickerlist($options);
 ##	$balas = array(
 #		'replyToken' => $replyToken,														
@@ -1851,7 +1851,7 @@ if($message['type']=='text') {
 #							)
 #						);
 						
-}
+#}
     if ($command == '#owner') { 
      
         $balas = array( 
