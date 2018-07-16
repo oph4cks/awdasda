@@ -35,7 +35,46 @@ if (count($pesan_datang) > 2) {
         $options .= $pesan_datang[$i];
     }
 }
-
+#-------------------------[Function]-------------------------#
+function tren($keyword) {
+    $uri = "http://api.secold.com/translate/en/" . $keyword;
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    $result = "Type : English";
+    $result .= "\nTranslate : ";
+	$result .= $json['result'];
+    return $result;
+}
+#-------------------------[Function]-------------------------#
+function trid($keyword) {
+    $uri = "http://api.secold.com/translate/id/" . $keyword;
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    $result = "Type : Indonesian";
+    $result .= "\nTranslate : ";
+	$result .= $json['result'];
+    return $result;
+}
+#-------------------------[Function]-------------------------#
+function trja($keyword) {
+    $uri = "http://api.secold.com/translate/ja/" . $keyword;
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    $result = "Type : Japanese";
+    $result .= "\nTranslate : ";
+	$result .= $json['result'];
+    return $result;
+}
+#-------------------------[Function]-------------------------#
+function trar($keyword) {
+    $uri = "http://api.secold.com/translate/ar/" . $keyword;
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    $result = "Type : Arabic";
+    $result .= "\nTranslate : ";
+	$result .= $json['result'];
+    return $result;
+}
 #-------------------------[Function]-------------------------#
 function cuaca($keyword) {
     $uri = "http://api.openweathermap.org/data/2.5/weather?q=" . $keyword . ",ID&units=metric&appid=e172c2f3a3c620591582ab5242e0e6c4";
@@ -742,6 +781,33 @@ function shalat($keyword) {
 	  $result .= $json['data']['Isha'];
     return $result;
 }
+function saveitoffline($keyword) {
+    $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+	$result = "====[SaveOffline]====\n";
+	$result .= "Başlık : \n";
+	$result .= $json['title'];
+	$result .= "\n\nÖlçmek : \n";
+	$result .= $json['urls'][0]['label'];
+	$result .= "\n\nURL Download : \n";
+	$result .= $json['urls'][0]['id'];
+	$result .= "\n\nÖlçmek : \n";
+	$result .= $json['urls'][1]['label'];
+	$result .= "\n\nURL Download : \n";
+	$result .= $json['urls'][1]['id'];
+	$result .= "\n\nÖlçmek : \n";
+	$result .= $json['urls'][2]['label'];	
+	$result .= "\n\nURL Download : \n";
+	$result .= $json['urls'][2]['id'];
+	$result .= "\n\nÖlçmek : \n";
+	$result .= $json['urls'][3]['label'];	
+	$result .= "\n\nURL Download : \n";
+	$result .= $json['urls'][3]['id'];	
+	$result .= "\n\nArama : Google\n";
+	$result .= "====[SaveOffline]====";
+    return $result;
+}
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == 'Help') {
     $text .= "┇──────────────\n";
@@ -764,6 +830,8 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "┇ merhaba\n";
     $text .= "┇ selam\n";
     $text .= "┇ @myinfo\n";
+    $text .= "┇ #convert [url]\n";
+    $text .= "┇ #qr [url]\n";
     $text .= "┇ #location [sehir adı]\n";
     $text .= "┇ #hava [sehir adı]\n";
     $text .= "┇ #youtube  [parca adı]\n";
@@ -795,6 +863,92 @@ if ($type == 'join' || $command == 'Help') {
         )
     );
 }
+if($message['type']=='text') {
+	    if ($command == '/tr-ar') {
+        $result = trar($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+	    if ($command == '/tr-ja') {
+        $result = trja($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+	    if ($command == '/tr-id') {
+        $result = trid($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+	    if ($command == '/tr-en') {
+        $result = tren($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+	    if ($command == '#qr') {
+        $result = qrcode($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'image',
+                    'originalContentUrl' => $qrcode($options),
+                    'previewImageUrl' => qrcode($options)
+                )
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+	    if ($command == '#convert') {
+        $result = saveitoffline($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => saveitoffline($options)
+                )
+            )
+        );
+    }
+}
+
 if($message['type']=='text') {
 	    if ($command == '#hava') {
         $result = cuaca($options);
@@ -1683,19 +1837,19 @@ if($message['type']=='text') {
     }
 }
 
-elseif($message['type']=='sticker'){	
-	$result = stickerlist($options);
-	$balas = array(
-		'replyToken' => $replyToken,														
-		'messages' => array(
-			array(
-		            'type' => 'sticker', // sesuaikan
-                            'packageId' => 1, // sesuaikan
-                            'stickerId' => $result// sesuaikan										
-									
-									)
-							)
-						);
+#elseif($message['type']=='sticker'){	
+#	$result = stickerlist($options);
+##	$balas = array(
+#		'replyToken' => $replyToken,														
+#		'messages' => array(
+#			array(
+#		            'type' => 'sticker', // sesuaikan
+#                            'packageId' => 1, // sesuaikan
+#                            'stickerId' => $result// sesuaikan										
+#									
+#									)
+#							)
+#						);
 						
 }
     if ($command == '#owner') { 
@@ -1729,246 +1883,6 @@ elseif($message['type']=='sticker'){
             ) 
         ); 
     }
-if ($command == '#selamunaleykum') {
-    $balas = array(
-        'replyToken' => $replyToken,
-        'messages' => array(
-          array (
-  'type' => 'template',
-  'altText' => 'CyberTKChatBot-V-3.5.0',
-  'template' =>
-  array (
-    'type' => 'carousel',
-    'columns' =>
-    array (
-        0 =>
-      array (
-        'thumbnailImageUrl' => 'https://image.prntscr.com/image/dPfWToj6QEWfADWJxP2axA.jpg',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'CyberTK Kicker & Security',
-        'text' => 'Menüden yararlanmak için Kaydır',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://instagram.com/_aquariusman',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'Line İletişim için tıkla',
-            'text' => 'http://line.me/ti/p/~cybertk0',
-          ),
-        ),
-      ),
-      1 =>
-      array (
-        'thumbnailImageUrl' => 'https://s3.amazonaws.com/urgeio-versus/photo-editor-by-aviary/front/front-1391686692704.variety.jpg',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'IMAGE NEON',
-        'text' => 'image editor',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://example.com/page/123',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken #imagerenkli <yazistedigini>',
-          ),
-        ),
-      ),
-      2 =>
-      array (
-        'thumbnailImageUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/2000px-YouTube_social_white_square_%282017%29.svg.png',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'YOUTUBE',
-        'text' => 'Anahtar kelimeler temelinde youtubedaki videoları arayın',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://example.com/page/123',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken #youtube <sarkı adı>',
-          ),
-        ),
-      ),
-      3 =>
-      array (
-        'thumbnailImageUrl' => 'https://d500.epimg.net/cincodias/imagenes/2015/05/25/lifestyle/1432541958_414675_1432542807_noticia_normal.jpg',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'GOOGLE IMAGE',
-        'text' => 'Googleda anahtar kelimelere dayalı tüm görselleri arayın',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://example.com/page/123',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken #image <yazı>',
-          ),
-        ),
-      ),
-      4 =>
-      array (
-        'thumbnailImageUrl' => 'https://cdn.icon-icons.com/icons2/1238/PNG/512/smallwallclock_83790.png',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'TIME',
-        'text' => 'Anahtar Kelimeler temelinde Anime Bilgi Bulma',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://example.com/page/123',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken #time <sehir>',
-          ),
-        ),
-      ),
-      5 =>
-      array (
-        'thumbnailImageUrl' => 'https://is3-ssl.mzstatic.com/image/thumb/Purple62/v4/cc/68/6c/cc686c29-ffd2-5115-2b97-c4821b548fe3/AppIcon-1x_U007emarketing-85-220-6.png/246x0w.jpg',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'PRAYTIME',
-        'text' => 'Dünyadaki Namazın Takvimini Öğrenin',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://example.com/page/123',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken #namaz <sehir>',
-          ),
-        ),
-      ),
-       6 =>
-      array (
-        'thumbnailImageUrl' => 'https://s2.bukalapak.com/img/2245927012/w-1000/Arah_Kiblat.jpg',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'KIBLE',
-        'text' => 'kıble yönünün yerini bulmak',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://example.com/page/123',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken #kıble <lokasyon>',
-          ),
-        ),
-      ),
-      7 =>
-      array (
-        'thumbnailImageUrl' => 'https://taisy0.com/wp-content/uploads/2015/07/Google-Maps.png',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'GOOGLEMAP',
-        'text' => 'Yeri ve Koordinat Yeri Adını bilmek',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://example.com/page/123',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken #location <sehir>',
-          ),
-        ),
-      ),
-      8 =>
-      array (
-        'thumbnailImageUrl' => 'https://st3.depositphotos.com/3921439/12696/v/950/depositphotos_126961774-stock-illustration-the-tv-icon-television-and.jpg',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'TELEVISION',
-        'text' => '....',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://example.com/page/123',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken ...',
-          ),
-        ),
-      ),
-      9 =>
-      array (
-        'thumbnailImageUrl' => 'https://4vector.com/i/free-vector-cartoon-weather-icon-05-vector_018885_cartoon_weather_icon_05_vector.jpg',
-        'imageBackgroundColor' => '#00FFFF',
-        'title' => 'WEATHER STATUS',
-        'text' => 'Dünya Hava Tahminini Bilin',
-        'defaultAction' =>
-        array (
-          'type' => 'uri',
-          'label' => 'View detail',
-          'uri' => 'http://example.com/page/222',
-        ),
-        'actions' =>
-        array (
-          0 =>
-          array (
-            'type' => 'message',
-            'label' => 'TIKLA',
-            'text' => 'yazman gereken #hava <sehir>',
-          ),
-        ),
-      ),
-    ),
-    'imageAspectRatio' => 'rectangle',
-    'imageSize' => 'cover',
-  ),
-)
-)
-);
-}
 if (isset($balas)) {
     $result = json_encode($balas);
 //$result = ob_get_clean();
@@ -1978,4 +1892,3 @@ if (isset($balas)) {
 
     $client->replyMessage($balas);
 }
-?>
